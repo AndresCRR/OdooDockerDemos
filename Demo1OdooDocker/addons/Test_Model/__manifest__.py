@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "custom_crm",
+    'name': "Test_Model",
 
     'summary': """
-        Módulo CRM para la gestión de visitas""",
+        Módulo open academy de odoo""",
 
     'description': """
-        Módulo CRM para la gestión de visitas
+        Módulo open academy de odoo realizado en base a la documentación de odoo
     """,
 
     'author': "Andres C Ramirez",
@@ -19,17 +19,17 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','sale_management'],
+    'depends': ['base'],
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
+        'security/ir.model.access.csv',
         'views/test_menu.xml',
-        'views/templates.xml',
-        'reports/visit.xml'
+        'views/estate_menu.xml',
+        #'reports/visit.xml'
     ],
     # only loaded in demonstration mode
     'demo': [
-        'demo/demo.xml',
+        #'demo/demo.xml',
     ],
 }
