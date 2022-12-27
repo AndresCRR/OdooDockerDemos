@@ -16,6 +16,29 @@
         </field>
     </record>
 
+    <record id="test_model_view_form" model="ir.ui.view">
+        <field name="name">test.model.view.form</field>
+        <field name="model">test.model</field>
+        <field name="arch" type="xml">
+            <form string="Test">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                        <group>
+                            <field name="last_seen"/>
+                        </group>
+                        <notebook>
+                            <page string="Description">
+                                <field name="description"/>
+                            </page>
+                        </notebook>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
 
     <menuitem id="test_menu_root" name="Test">
         <menuitem id="test_first_level_menu" name="First Level">

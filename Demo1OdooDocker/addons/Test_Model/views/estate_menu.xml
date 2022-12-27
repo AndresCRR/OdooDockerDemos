@@ -21,6 +21,60 @@
         </field>
     </record>
 
+    <record id="estate_property_view_form" model="ir.ui.view">
+        <field name="name">estate_property.model.view.form</field>
+        <field name="model">estate_property.model</field>
+        <field name="arch" type="xml">
+            <form string="Properties">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <group>
+                            <field name="postcode"/>
+                        </group>
+                        <group>
+                            <field name="expected_price"/>
+                        </group>
+                        <group>
+                            <field name="date_availability"/>
+                        </group>
+                        <group>
+                            <field name="selling_price"/>
+                        </group>
+                        <notebook>
+                            <page string="Description" position="before">
+
+                                <group>
+                                    <field name="description"/>
+                                </group>
+                                <group>
+                                    <field name="bedrooms"/>
+                                </group>
+                                <group>
+                                    <field name="living_area"/>
+                                </group>
+                                <group>
+                                    <field name="facades"/>
+                                </group>
+                                <group>
+                                    <field name="garage" position="move"/>
+                                </group>
+                                <group>
+                                    <field name="garden" paddig="2px 10px"/>
+                                </group>
+                                <group>
+                                    <field name="garden_area"/>
+                                </group>
+                                <group>
+                                    <field name="garden_orientation" position="inside"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
 
     <menuitem id="estate_menu_root" name="Estate">
         <menuitem id="estate_first_level_menu" name="Menu">

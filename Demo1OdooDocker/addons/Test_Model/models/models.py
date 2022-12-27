@@ -7,6 +7,7 @@ class TestModel(models.Model):
     _description = "Test Model"
 
     name = fields.Char(default="Unknown")
+    description = fields.Text(string='Description')
     last_seen = fields.Datetime("Last Seen", default=lambda self: fields.Datetime.now())
 
 
@@ -17,9 +18,9 @@ class estate_property(models.Model):
     name = fields.Char(string='Title',required=True)
     description = fields.Text(string='Description')
     postcode = fields.Char(string='Postcode')
-    date_availability = fields.Date(string='Available From',default=lambda self: fields.Date.today()+ relativedelta(months=3))
+    date_availability = fields.Date(string='Available From', copy=False, default=lambda self: fields.Date.today()+ relativedelta(months=3))
     expected_price = fields.Float(string='Expected price',required=True)
-    selling_price = fields.Float(string='Selling Price')
+    selling_price = fields.Float(string='Selling Price',readonly=True, copy=False)
     bedrooms = fields.Integer(string='Bedrooms', default=2)
     living_area = fields.Integer(string='Living Area (sqm)')
     facades = fields.Integer(string='Facades')
