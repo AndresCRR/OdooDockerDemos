@@ -2,7 +2,7 @@
     <record id="test_model_action" model="ir.actions.act_window">
         <field name="name">Test action</field>
         <field name="res_model">test.model</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">tree,form,search</field>
     </record>
 
     <record id="test_model_view_tree" model="ir.ui.view">
@@ -39,6 +39,18 @@
             </form>
         </field>
     </record>
+
+    <record id="test_model_view_search" model="ir.ui.view">
+        <field name="name">test.model.view.search</field>
+        <field name="model">test.model</field>
+        <field name="arch" type="xml">
+            <search string="Tests">
+                <field name="name"/>
+                <field name="last_seen"/>
+            </search>
+        </field>
+    </record>
+
 
     <menuitem id="test_menu_root" name="Test">
         <menuitem id="test_first_level_menu" name="First Level">
